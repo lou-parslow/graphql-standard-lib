@@ -1,0 +1,6 @@
+query {
+  base64Data(name: "graphql.png") {
+    name
+    base64
+  }
+}

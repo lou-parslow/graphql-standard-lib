@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Mutations\insertBase64Data.graphql" />
+    <None Remove="Mutations\insertBase64Data.json" />
+    <None Remove="Queries\badQuery.graphql" />
+    <None Remove="Queries\badQuery.json" />
+    <None Remove="Queries\base64DataCount_0.graphql" />
+    <None Remove="Queries\base64DataCount_0.json" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Mutations\insertBase64Data.graphql" />
+    <EmbeddedResource Include="Queries\base64Data.graphql" />
+    <EmbeddedResource Include="Queries\badQuery.graphql" />
+    <EmbeddedResource Include="Queries\badQuery.json" />
+    <EmbeddedResource Include="Queries\base64DataCount_0.graphql" />
+    <EmbeddedResource Include="Queries\base64DataCount_0.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.msbuild" Version="2.5.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="nunit" Version="3.10.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\{{cookiecutter.library_name}}\{{cookiecutter.library_name}}.csproj" />
+  </ItemGroup>
+
+</Project>

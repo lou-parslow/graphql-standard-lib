@@ -1,0 +1,16 @@
+﻿{
+  "errors": [
+    {
+      "message": "Cannot query field \"badQuery\" on type \"Query\".",
+      "locations": [
+        {
+          "line": 2,
+          "column": 3
+        }
+      ],
+      "extensions": {
+        "code": "5.2.1"
+      }
+    }
+  ]
+}
